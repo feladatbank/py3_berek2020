@@ -63,4 +63,20 @@ Minta: Output: ___________________________________
 ____________________________________________________
 """
 
+#Név;Neme;Részleg;Belépés;Bér
+#Beri Dániel;férfi;beszerzés;1979;222943
+#Csavar Pista;férfi;pénzügy;1995;234074
+
+class Berek:
+  def __init__(self,sor):
+    nev,neme,reszleg,belepes,ber = sor.strip().split(";")
+    self.nev = nev
+    self.neme = neme
+    self.reszleg = reszleg
+    self.belepes = belepes
+    self.ber = ber
+
+with open("berek2020.txt","r",encoding="utf-8") as f:
+  fejlecc = f.readline()
+  lista = [Berek(sor) for sor in f]
 
