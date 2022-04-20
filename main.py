@@ -98,4 +98,5 @@ atlag = atlag.replace(".",",")
 
 print(f"4.feladat: Bérek átlaga: {atlag} eFt")
 
-
+#5
+bekeres = input("5.feladat: Kérem egy részleg nevét: ")
