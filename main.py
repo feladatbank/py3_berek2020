@@ -32,7 +32,7 @@ megoldásához, amelynek projektjét Bérek2020 néven mentse el!
 
 2. Olvassa be a bérek2020.txt állomány sorait és tárolja az adatokat egy olyan
 összetett adatszerkezetben, amely használatával a további feladatok megoldhatók!
-Ügyeljen arra, hogy az állomány első sora az adatok fejlécét tartalmazza!
+Ügyeljen arra, hogy az állomány első sora az adatok fejlécét tartalmazza! 
 
 3. Határozza meg és írja ki a képernyőre, hogy hány dolgozó adatai találhatók a
 forrásállományban!
@@ -67,6 +67,8 @@ ____________________________________________________
 #Beri Dániel;férfi;beszerzés;1979;222943
 #Csavar Pista;férfi;pénzügy;1995;234074
 
+#2
+
 class Berek:
   def __init__(self,sor):
     nev,neme,reszleg,belepes,ber = sor.strip().split(";")
@@ -80,3 +82,6 @@ with open("berek2020.txt","r",encoding="utf-8") as f:
   fejlecc = f.readline()
   lista = [Berek(sor) for sor in f]
 
+#3
+
+print(f"3.feladat: Dolgozók száma: {len(lista)} fő")
