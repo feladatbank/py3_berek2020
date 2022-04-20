@@ -100,3 +100,22 @@ print(f"4.feladat: Bérek átlaga: {atlag} eFt")
 
 #5
 bekeres = input("5.feladat: Kérem egy részleg nevét: ")
+
+#6
+
+legnagyobb = [(sor.ber,sor) for sor in lista if sor.reszleg == bekeres]
+
+if len(legnagyobb) > 0:
+  nagy,adat = max(legnagyobb)
+
+if len(legnagyobb) > 0:
+  print(f"""6.feladat: A legtöbbet kereső a megadott részlegen:
+       Név: {adat.nev}
+       Neme: {adat.neme}
+       Belépés: {adat.belepes}
+       Bér: {nagy} Forint""")
+else:
+  print("6.feladat: A megadott részleg nem létezik a cégnél!")
+
+
+
