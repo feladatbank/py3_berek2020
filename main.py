@@ -76,7 +76,7 @@ class Berek:
     self.neme = neme
     self.reszleg = reszleg
     self.belepes = belepes
-    self.ber = ber
+    self.ber = int(ber)
 
 with open("berek2020.txt","r",encoding="utf-8") as f:
   fejlecc = f.readline()
@@ -85,3 +85,17 @@ with open("berek2020.txt","r",encoding="utf-8") as f:
 #3
 
 print(f"3.feladat: Dolgozók száma: {len(lista)} fő")
+
+#4
+
+berek = [sor.ber for sor in lista] 
+ossz = sum(berek)
+atlag = ossz / len(berek)
+atlag = atlag / 1000
+atlag = f"{atlag:.1f}"
+atlag = str(atlag)
+atlag = atlag.replace(".",",")
+
+print(f"4.feladat: Bérek átlaga: {atlag} eFt")
+
+
